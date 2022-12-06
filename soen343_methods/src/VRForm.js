@@ -2,15 +2,14 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 import Col from 'react-bootstrap/Col';
-import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import { useNavigate } from "react-router-dom";
 
 
 function VRForm() {
     const [validated, setValidated] = useState(false);
-
     const navigate = useNavigate(); 
+
     const handleClick = () => {
         navigate("/formValidation");
     }
@@ -21,9 +20,7 @@ function VRForm() {
             event.preventDefault();
             event.stopPropagation();
         }
-
         setValidated(true)
-
         if (form.checkValidity() === true){
             handleClick();
         }

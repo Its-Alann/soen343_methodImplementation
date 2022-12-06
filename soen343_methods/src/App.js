@@ -20,12 +20,16 @@ function App() {
 
       <Router>
         <Row xs="auto">
-          <Col><Nav.Item>
-            <Nav.Link as={Link} to={'/'}>Home</Nav.Link>
-          </Nav.Item></Col>
-          <Col><Nav.Item>
-            <Nav.Link as={Link} to={'/registerVolunteer'}>Volunteer Center</Nav.Link>
-          </Nav.Item></Col>
+          <Col>
+            <Nav.Item>
+              <Nav.Link as={Link} to={'/'}>Home</Nav.Link>
+            </Nav.Item>
+          </Col>
+          <Col>
+            <Nav.Item>
+              <Nav.Link as={Link} to={'/registerVolunteer'}>Volunteer Center</Nav.Link>
+            </Nav.Item>
+          </Col>
         </Row>
         <Routes>
           <Route path="/" exact element={<HomePage />} />
